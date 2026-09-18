@@ -10,234 +10,71 @@
         <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../CSS/styles.css">
         <title>About Us | Catalysta Business Consultancy Firm</title>
-
     </head>
-    <body>
-        <!-- Header / top navigation -->
-        <header class="site-header">
-            <a class="brand" href="index.html" aria-label="Homepage"><img src="../assets/logo.png" alt="Catalysta"></a>
-            <label class="burger" for="burger-about" aria-label="Toggle navigation menu">
-                <input type="checkbox" id="burger-about">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <nav class="navbar" aria-label="Primary navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html" aria-current="page">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="blogs.html">Blogs</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </header>
+<body>
 
-        <!-- Main page content -->
-        <main>
-            <!-- About the company -->
-            <section class="ab-about" id="about-company">
-                <div class="ab-grid">
+<!-- ===================== NAVBAR ===================== -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo" aria-label="Catalysta home">
+      <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#blogs">Blogs</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-                    <div class="ab-copy">
-                        <p class="eyebrow">ABOUT CATALYSTA</p>
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer" id="contact">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
+        <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
+      </a>
+      <p class="footer-contact"><span class="footer-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>+63) 995 069 6769</p>
+      <p class="footer-contact"><span class="footer-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3H13.5V9.2c0-.87.24-1.46 1.5-1.46h1.6V5.14A21 21 0 0 0 14.2 5c-2.3 0-3.9 1.4-3.9 4v2H8v3h2.3v7z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+      </div>
+    </div>
 
-                        <h1 class="ab-title">Catalysta: Architects of<br>Business Transformation</h1>
+    <div class="footer-links">
+      <h4>Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#blogs">Blogs</a>
+    </div>
 
-                        <p class="ab-lead">Our role as a business management consultancy firm goes beyond
-                            providing services; we aim to be architects of our client&rsquo;s success.</p>
+    <div class="footer-form">
+      <h4>Contact us</h4>
+      <form id="contactForm" novalidate>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="3" required></textarea>
+        <button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Catalysta Consultancy</div>
+</footer>
 
-                        <p class="ab-sub">Specializing in problem identification and analysis, strategy development,
-                            process optimization, and more, we offer a holistic approach to business improvement.</p>
-
-                        <ul class="ab-checks">
-                            <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M7.8 12.3l2.9 2.9 5.5-6.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                Problem identification and analysis
-                            </li>
-                            <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M7.8 12.3l2.9 2.9 5.5-6.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                Process optimization
-                            </li>
-                            <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M7.8 12.3l2.9 2.9 5.5-6.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                Strategy development
-                            </li>
-                            <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M7.8 12.3l2.9 2.9 5.5-6.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                More holistic approaches to business improvement
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <figure class="ab-visual">
-                        <div class="ab-block">
-                            <svg class="ab-mark" viewBox="0 0 120 150" fill="currentColor" aria-hidden="true">
-                                <path d="M96 4c-31 14-52 40-52 71 0 28 18 53 46 71-38-13-66-42-66-74C24 42 54 13 96 4z"/>
-                                <path d="M60 72l5.5 16.5L82 94l-16.5 5.5L60 116l-5.5-16.5L38 94l16.5-5.5z"/>
-                            </svg>
-                        </div>
-
-                        <div class="ab-photo">
-                            <img src="../assets/hero_2.jpg" alt="A consultant writing notes over open documents at a desk">
-                        </div>
-
-                        <div class="ab-stat">
-                            <span class="ab-stat-number">1,000</span>
-                            <span class="ab-stat-label">Total Partners</span>
-                        </div>
-                    </figure>
-
-                </div>
-            </section>
-            <section class="ab-model" aria-labelledby="business-model-title">
-                <div class="ab-model-image">
-                    <img src="../assets/hero_3.jpg" alt="Consultants collaborating around a table">
-                </div>
-                <div class="ab-model-copy">
-                    <p class="eyebrow">Our business model</p>
-                    <h2 id="business-model-title">The Solo Consultant Model</h2>
-                    <p>A consultancy firm, CATALYSTA, specializes in assisting SMEs, professionals, and various entities that seek guidance in conducting business effectively. This firm also provides support to existing businesses facing operational challenges, offering solutions to legalize their operations and gain a competitive advantage.</p>
-                    <div class="ab-model-services">
-                        <p class="ab-model-label">Offered services</p>
-                        <ul>
-                            <li>Business Review</li>
-                            <li>Business Processes</li>
-                            <li>Managing Human Capital</li>
-                        </ul>
-                        <a class="ab-button" href="index.html#services">Check our services</a>
-                    </div>
-                </div>
-            </section>
-            <section class="ab-values" aria-labelledby="values-title">
-                <div class="ab-values-header">
-                    <p class="eyebrow">Mission, Vision &amp; Ambition</p>
-                    <h2 id="values-title" class="ab-section-title">Purpose that moves people, teams and organisations forward.</h2>
-                </div>
-
-                <div class="ab-cards">
-                    <article class="ab-card">
-                        <div class="ab-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="7.5"></circle>
-                                <path d="M12 2.8v4.5M12 16.7v4.5M2.8 12h4.5M16.7 12h4.5M5.8 5.8l3.2 3.2M15 15l3.2 3.2M18.2 5.8l-3.2 3.2M9 15l-3.2 3.2"></path>
-                            </svg>
-                        </div>
-                        <h3>Our Vision</h3>
-                        <p>Our Vision is to be the foremost authority in business management consultancy, driven to elevate SMEs and professionals with groundbreaking, principled strategies and solutions.</p>
-                    </article>
-
-                    <article class="ab-card">
-                        <div class="ab-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 16l5.2-5.2L12.4 16l4.8-6.4L20 16"></path>
-                                <path d="M4 18h16"></path>
-                                <path d="M20 10V4h-6"></path>
-                            </svg>
-                        </div>
-                        <h3>Our Mission</h3>
-                        <p>Our Mission is to significantly reduce our clients’ business risks by sharing our wealth of experience and knowledge in business management.</p>
-                    </article>
-
-                    <article class="ab-card">
-                        <div class="ab-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 18V8.5L12 4l7 4.5V18"></path>
-                                <path d="M9 15.5l3 3 6-7"></path>
-                            </svg>
-                        </div>
-                        <h3>Our Ambition</h3>
-                        <p>Our ambition is to craft a future where our client’s success stories are a testament to our commitment to excellence and collaborative innovation.</p>
-                    </article>
-                </div>
-            </section>
-            <section class="ab-core-values" aria-labelledby="core-values-title">
-                <div class="section-heading">
-                    <p class="eyebrow">Core Values</p>
-                    <p class="section-count">03 <span>/</span> 04</p>
-                </div>
-
-                <div class="ab-core-grid">
-                    <article class="ab-core-item">
-                        <span class="ab-core-index">01</span>
-                        <h3 id="core-values-title">Professionalism</h3>
-                        <p>Maintaining high standards in all business dealings is a core value that CATALYSTA upholds. Professionalism, for CATALYSTA, means delivering services with integrity, respect, and a commitment to ethical practices. This ensures clients can trust the advice and solutions provided, knowing they are grounded in a deep understanding of business dynamics and ethical standards.</p>
-                    </article>
-
-                    <article class="ab-core-item">
-                        <span class="ab-core-index">02</span>
-                        <h3>Service Oriented</h3>
-                        <p>At CATALYSTA, we are guided by the value of being service-oriented, which is closely aligned with our mission of improving our clients' situations. Our commitment to this value is reflected in our approach of not just meeting our client's needs but also making a genuine effort to understand and empathize with them. We aim to provide effective solutions that not only nurture long-term relationships but also contribute to the success of our clients.</p>
-                    </article>
-
-                    <article class="ab-core-item">
-                        <span class="ab-core-index">03</span>
-                        <h3>Innovative</h3>
-                        <p>Innovation is a vital element in the field of business management consultancy, where staying ahead of market trends and developing creative solutions is essential. For CATALYSTA, this means continuously seeking new and improved ways to tackle clients' challenges, while also pushing beyond conventional methods to deliver more efficient and effective outcomes.</p>
-                    </article>
-
-                    <article class="ab-core-item">
-                        <span class="ab-core-index">04</span>
-                        <h3>Knowledgeable</h3>
-                        <p>At CATALYSTA, we prioritize being knowledgeable, which highlights our dedication to being well-informed and experienced. This value involves a continuous process of learning and staying up-to-date with the latest trends, technologies, and methodologies in business management. This approach ensures that the advice and solutions we offer to our clients are based on the most current and comprehensive information available.</p>
-                    </article>
-
-                    <article class="ab-core-item ab-core-item-wide">
-                        <span class="ab-core-index">05</span>
-                        <h3>Committed</h3>
-                        <p>This value reflects the depth of dedication CATALYSTA has towards the success of its clients. It means fully investing in clients' goals and working tirelessly to help them achieve their objectives. This value signifies persisting through challenges and being a reliable, steadfast partner to clients throughout their business journey.</p>
-                    </article>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="site-footer-inner section-frame">
-                <div class="footer-brand">
-                    <a class="brand" href="index.html" aria-label="Homepage"><img src="../assets/logo.png" alt="Catalysta"></a>
-                    <div class="footer-contact">
-                        <a href="tel:+639950696769">(+63) 995 069 6769</a>
-                        <span>Comissary Warehouse 168, Taguig, 1637 Metro Manila, Philippines</span>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#blogs">Blogs</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <form class="footer-form" action="https://formsubmit.co/chlarence.suguitan83@gmail.com" method="POST">
-                        <label for="footer-email">Email</label>
-                        <input id="footer-email" type="email" name="email" autocomplete="email" required>
-
-                        <label for="footer-message">Message</label>
-                        <textarea id="footer-message" name="message" rows="3" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <ul class="social-links">
-                        <li><a class="social-link" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><img src="../assets/facebook_icon.png" alt="Facebook"></a></li>
-                        <li><a class="social-link" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="../assets/instagram_icon.png" alt="Instagram"></a></li>
-                        <li><a class="social-link" href="https://x.com" target="_blank" rel="noreferrer" aria-label="X"><img src="../assets/x_icon.png" alt="X"></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-meta">
-                    <span>© 2026 Catalysta Consultancy</span>
-                </div>
-            </div>
-        </footer>
-    </body>
+<script src="../JS/script.js"></script>
+</body>
 </html>
