@@ -42,14 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    const getLinkHash = (link) => new URL(link.href, window.location.href).hash;
-    const setActiveFromHash = () => {
-      const matchingLink = Array.from(navLinks).find(link => getLinkHash(link) === window.location.hash);
-      setActiveNav(matchingLink || navLinks[0]);
+    const getLinkUrl = (link) => new URL(link.href, window.location.href);
+    const setActiveFromLocation = () => {
+      const currentUrl = new URL(window.location.href);
+      const matchingLink = Array.from(navLinks).find((link) => {
+        const linkUrl = getLinkUrl(link);
+        const samePage = linkUrl.pathname === currentUrl.pathname;
+        const sameHash = !linkUrl.hash
+          || linkUrl.hash === currentUrl.hash
+          || (!currentUrl.hash && linkUrl.hash === '#home');
+        return samePage && sameHash;
+      });
+
+      setActiveNav(matchingLink || null);
     };
 
-    setActiveFromHash();
-    window.addEventListener('hashchange', setActiveFromHash);
+    setActiveFromLocation();
+    window.addEventListener('hashchange', setActiveFromLocation);
 
     navToggle.addEventListener('click', () => {
       const isOpen = header.classList.toggle('nav-open');
