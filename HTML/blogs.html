@@ -1,79 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="The latest thinking from Catalysta business consultancy.">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../CSS/styles.css">
-		<title>Blogs | Catalysta Business Consultancy Firm</title>
-	</head>
-	<body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs | Catalysta</title>
+<link rel="stylesheet" href="../CSS/styles.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<!-- ===================== NAVBAR ===================== -->
 <header class="site-header">
-  <div class="nav-wrap">
-    <a href="index.html" class="logo" aria-label="Catalysta home">
-      <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
-    </a>
-    <nav class="main-nav">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#about">About us</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#blogs">Blogs</a>
-    </nav>
-    <a href="index.html#contact" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+	<div class="nav-wrap">
+		<a href="index.html" class="logo" aria-label="Catalysta home">
+			<img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
+		</a>
+		<nav class="main-nav">
+			<a href="index.html#home">Home</a>
+			<a href="index.html#about">About us</a>
+			<a href="index.html#services">Services</a>
+			<a href="blogs.html" class="active" aria-current="page">Blogs</a>
+		</nav>
+		<a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
+		<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
 </header>
 
-<!-- ===================== FOOTER ===================== -->
+<main>
+	<section class="blog-library" aria-labelledby="articles-title">
+		<div class="section-inner">
+			<div class="blog-library-head">
+				<div>
+					<p class="blog-library-label">Latest thinking</p>
+					<h2 id="articles-title">Articles</h2>
+				</div>
+			</div>
+			<form class="blog-controls" id="blogFilters" role="search">
+				<div class="blog-search-field">
+					<label for="blogSearch">Search articles</label>
+					<input type="search" id="blogSearch" name="search" placeholder="Search articles">
+				</div>
+				<div class="blog-date-field">
+					<label for="blogDate">Published date</label>
+					<input type="date" id="blogDate" name="date">
+				</div>
+				<button type="submit" class="blog-search-button" aria-label="Search articles"><i class='bx bx-search' aria-hidden="true"></i></button>
+				<button type="button" class="blog-clear-button" id="clearBlogFilters">Clear</button>
+			</form>
+			<div class="blog-list" id="blogList">
+				<article class="story-card blog-article" data-title="The Louis Vuitton Monogram a living pattern" data-date="2026-05-11">
+					<div class="story-image" role="img" aria-label="Louis Vuitton monogram fashion image"></div>
+					<div class="story-content">
+						<p class="story-kicker">Style <span></span> Fashion</p>
+						<h2>The Louis Vuitton <em>Monogram:</em></h2>
+						<p class="story-deck">A living pattern</p>
+					<div class="story-rule"></div>
+					<p class="story-excerpt">The story of the Louis Vuitton Monogram, unmistakable in its presence and timeless in its allure, told through three different perspectives.</p>
+					<div class="story-footer">
+						<p>By Tobias Jared Tomas <span>May 11, 2026</span></p>
+						<a href="#contact" class="text-link">Read article <span aria-hidden="true">↗</span></a>
+					</div>
+				</div>
+			</article>
+				<article class="story-card blog-article" data-title="The Benefits of Outsourcing Your Blog Content" data-date="2021-12-29">
+					<div class="story-image story-image--full">
+						<img src="../assets/article_2.jpg" alt="Smartwatch, earbuds and glasses arranged on a desk">
+					</div>
+					<div class="story-content">
+						<p class="story-kicker">Business <span></span> Content</p>
+						<h2>The Benefits of Outsourcing Your <em>Blog Content</em></h2>
+						<p class="story-deck">Creating a blog leaves businesses with a choice: hire in-house writers or outsource their writing.</p>
+						<div class="story-rule"></div>
+						<div class="story-footer">
+							<p>By Bhavik Sarkhedi <span>Dec 29, 2021</span></p>
+							<a href="#contact" class="text-link">Read article <span aria-hidden="true">↗</span></a>
+						</div>
+					</div>
+				</article>
+			</div>
+			<p class="blog-empty" id="blogEmpty" hidden>No articles match your search.</p>
+		</div>
+	</section>
+
+</main>
+
 <footer class="site-footer" id="contact">
-  <div class="section-inner footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
-        <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
-      </a>
-      <p class="footer-contact"><span class="footer-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </span>+63) 995 069 6769</p>
-      <p class="footer-contact"><span class="footer-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3H13.5V9.2c0-.87.24-1.46 1.5-1.46h1.6V5.14A21 21 0 0 0 14.2 5c-2.3 0-3.9 1.4-3.9 4v2H8v3h2.3v7z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
-      </div>
-    </div>
-
-    <div class="footer-links">
-      <h4>Links</h4>
-      <a href="index.html#home">Home</a>
-      <a href="index.html#about">About us</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#blogs">Blogs</a>
-    </div>
-
-    <div class="footer-form">
-      <h4>Contact us</h4>
-      <form id="contactForm" novalidate>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="3" required></textarea>
-        <button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
-        <p class="form-status" id="formStatus" role="status"></p>
-      </form>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Catalysta Consultancy</div>
+	<div class="section-inner footer-grid">
+		<div class="footer-brand">
+			<a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
+				<img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
+			</a>
+			<p class="footer-contact">(+63) 995 069 6769</p>
+			<p class="footer-contact">PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
+			<div class="footer-social">
+				<a href="#" aria-label="Facebook"><img src="../assets/facebook_icon.png" alt=""></a>
+				<a href="#" aria-label="Instagram"><img src="../assets/instagram_icon.png" alt=""></a>
+				<a href="#" aria-label="X"><img src="../assets/x_icon.png" alt=""></a>
+			</div>
+		</div>
+		<div class="footer-links">
+			<h4>Links</h4>
+			<a href="index.html#home">Home</a>
+			<a href="index.html#about">About us</a>
+			<a href="index.html#services">Services</a>
+			<a href="blogs.html">Blogs</a>
+		</div>
+		<div class="footer-form">
+			<h4>Contact us</h4>
+			<form id="contactForm" novalidate>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" rows="3" required></textarea>
+				<button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
+				<p class="form-status" id="formStatus" role="status"></p>
+			</form>
+		</div>
+	</div>
+	<div class="footer-bottom">© 2026 Catalysta Consultancy</div>
 </footer>
 
 <script src="../JS/script.js"></script>
-	</body>
+</body>
 </html>

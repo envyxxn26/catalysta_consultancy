@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Contact Catalysta business consultancy.">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../CSS/styles.css">
-		<title>Contact Us | Catalysta Business Consultancy Firm</title>
-	</head>
-	<body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Catalysta</title>
+<link rel="stylesheet" href="../CSS/styles.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<!-- ===================== NAVBAR ===================== -->
 <header class="site-header">
   <div class="nav-wrap">
     <a href="index.html" class="logo" aria-label="Catalysta home">
@@ -22,32 +21,101 @@
       <a href="index.html#home">Home</a>
       <a href="index.html#about">About us</a>
       <a href="index.html#services">Services</a>
-      <a href="index.html#blogs">Blogs</a>
+      <a href="blogs.html">Blogs</a>
     </nav>
-    <a href="index.html#contact" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
+    <a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- ===================== FOOTER ===================== -->
+<main class="contact-page">
+  <section class="contact-hero">
+    <div class="section-inner contact-hero-inner">
+      <div class="contact-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Contact us</div>
+        <h1 class="hero-title contact-title">Let’s build what’s next.</h1>
+        <p class="hero-text contact-intro">Tell us what you’re solving, where you want to grow, and what momentum looks like for your next chapter. We’ll help you turn complexity into clarity.</p>
+      </div>
+      <div class="contact-card">
+        <h2>Book a consultation</h2>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company name">
+          </div>
+          <div class="form-row">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option>Business Review</option>
+              <option>Business Proposal</option>
+              <option>Managing Human Capital</option>
+              <option>General enquiry</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your challenge or opportunity" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-pill btn-maroon">Send enquiry <span class="arrow">↗</span></button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-details">
+    <div class="section-inner contact-grid">
+      <div class="detail-panel">
+        <h3>Connect with us</h3>
+        <div class="detail-item">
+          <i class='bx bx-phone'></i>
+          <span>(+63) 995 069 6769</span>
+        </div>
+        <div class="detail-item">
+          <i class='bx bx-map'></i>
+          <span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</span>
+        </div>
+        <div class="detail-item">
+          <i class='bx bx-envelope'></i>
+          <span>hello@catalysta.co</span>
+        </div>
+      </div>
+
+      <div class="detail-panel highlight-panel">
+        <p class="panel-label">What to expect</p>
+        <h3>Focused guidance, practical recommendations, and a clear next move.</h3>
+        <ul>
+          <li>Strategy session tailored to your business model</li>
+          <li>Clear priorities and opportunity mapping</li>
+          <li>Consultancy support that feels collaborative and actionable</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer class="site-footer" id="contact">
   <div class="section-inner footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
         <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
       </a>
-      <p class="footer-contact"><span class="footer-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </span>+63) 995 069 6769</p>
-      <p class="footer-contact"><span class="footer-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
+      <p class="footer-contact">(+63) 995 069 6769</p>
+      <p class="footer-contact">PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3H13.5V9.2c0-.87.24-1.46 1.5-1.46h1.6V5.14A21 21 0 0 0 14.2 5c-2.3 0-3.9 1.4-3.9 4v2H8v3h2.3v7z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        <a href="#" aria-label="Facebook"><img src="../assets/facebook_icon.png" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="../assets/instagram_icon.png" alt=""></a>
+        <a href="#" aria-label="X"><img src="../assets/x_icon.png" alt=""></a>
       </div>
     </div>
 
@@ -61,13 +129,13 @@
 
     <div class="footer-form">
       <h4>Contact us</h4>
-      <form id="contactForm" novalidate>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="3" required></textarea>
+      <form id="contactFormFooter" novalidate>
+        <label for="footer-email">Email</label>
+        <input type="email" id="footer-email" name="email" required>
+        <label for="footer-message">Message</label>
+        <textarea id="footer-message" name="message" rows="3" required></textarea>
         <button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
-        <p class="form-status" id="formStatus" role="status"></p>
+        <p class="form-status" id="footerFormStatus" role="status"></p>
       </form>
     </div>
   </div>
@@ -75,5 +143,5 @@
 </footer>
 
 <script src="../JS/script.js"></script>
-	</body>
+</body>
 </html>
