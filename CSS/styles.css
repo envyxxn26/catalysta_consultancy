@@ -658,9 +658,9 @@ section{ position:relative; }
   padding: clamp(4rem, 8vw, 7rem) 0 2rem;
 }
 .contact-hero-inner{
-  display:grid; grid-template-columns: 1fr; gap: 2.5rem; align-items:center;
+  display:grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 5vw, 5rem); align-items:center;
 }
-.contact-copy{ max-width: 620px; }
+.contact-copy{ max-width: 620px; align-self:start; }
 .contact-title{
   color: var(--maroon-dark);
   text-shadow: none;
