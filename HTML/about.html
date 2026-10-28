@@ -20,10 +20,27 @@
     </a>
     <nav class="main-nav">
       <a href="index.html#home">Home</a>
-      <a href="about.html" class="active" aria-current="page">About us</a>
+      <div class="nav-dropdown">
+        <a href="about.html" class="nav-dropdown-trigger active" aria-current="page">About us <span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-dropdown-menu">
+          <a href="about.html#our-company">Our Company</a>
+          <a href="about.html#our-team">Our Team</a>
+          <a href="about.html#our-approach">Our Approach</a>
+        </div>
+      </div>
       <a href="services.html">Services</a>
+      <!-- PRODUCTS & CART (DISABLED) <a href="products.html">Products</a> -->
       <a href="blogs.html">Blogs</a>
     </nav>
+    <!-- PRODUCTS & CART (DISABLED) navbar cart button. Remove the comment markers to re-enable.
+    <button type="button" class="btn-cart" data-quantity="0" aria-label="Shopping cart, 0 items" title="Shopping cart">
+      <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+      </svg>
+      <span class="quantity" aria-hidden="true"></span>
+    </button>
+    END PRODUCTS & CART (DISABLED) cart button -->
+
     <a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -31,29 +48,299 @@
   </div>
 </header>
 
-<section class="loading-content-shell" aria-live="polite" aria-busy="true">
-  <div class="loading-content">
-    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-      <div class="wheel"></div>
-      <div class="hamster">
-        <div class="hamster__body">
-          <div class="hamster__head">
-            <div class="hamster__ear"></div>
-            <div class="hamster__eye"></div>
-            <div class="hamster__nose"></div>
+<main>
+  <section class="company-section" id="our-company" aria-labelledby="company-title">
+    <div class="section-inner company-grid">
+      <div class="company-carousel" data-company-carousel role="region" aria-roledescription="carousel" aria-label="Catalysta office photos">
+        <div class="company-carousel-viewport">
+          <figure class="company-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+            <img src="../assets/Catalysta_Office.jpg" alt="Interior of the Catalysta office" draggable="false">
+            <figcaption class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer">Edifice Pinas</a></figcaption>
+          </figure>
+          <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
+            <img src="../assets/Catalysta_Office(2).jpg" alt="Another view of the Catalysta office" draggable="false">
+            <figcaption class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer" tabindex="-1">Edifice Pinas</a></figcaption>
+          </figure>
+          <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
+            <img src="../assets/Catalysta_Office(3).jpg" alt="A third view of the Catalysta office" draggable="false">
+            <figcaption class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer" tabindex="-1">Edifice Pinas</a></figcaption>
+          </figure>
+        </div>
+        <div class="company-carousel-controls" role="group" aria-label="Office photo controls">
+          <button class="company-carousel-arrow" type="button" data-carousel-prev aria-label="Previous office photo">
+            <span aria-hidden="true">&larr;</span>
+          </button>
+          <div class="company-carousel-dots" role="group" aria-label="Choose an office photo">
+            <button type="button" class="is-active" data-carousel-slide="0" aria-label="Show office photo 1 of 3" aria-current="true"></button>
+            <button type="button" data-carousel-slide="1" aria-label="Show office photo 2 of 3"></button>
+            <button type="button" data-carousel-slide="2" aria-label="Show office photo 3 of 3"></button>
           </div>
-          <div class="hamster__limb hamster__limb--fr"></div>
-          <div class="hamster__limb hamster__limb--fl"></div>
-          <div class="hamster__limb hamster__limb--br"></div>
-          <div class="hamster__limb hamster__limb--bl"></div>
-          <div class="hamster__tail"></div>
+          <button class="company-carousel-arrow" type="button" data-carousel-next aria-label="Next office photo">
+            <span aria-hidden="true">&rarr;</span>
+          </button>
         </div>
       </div>
-      <div class="spoke"></div>
+      <div class="company-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+        <h2 class="heading-maroon" id="company-title">Business transformation, built around you.</h2>
+        <p>CATALYSTA stands at the forefront of business transformation. Our role as a business management consultancy firm goes beyond providing services; we aim to be architects of our client's success. Specializing in problem identification and analysis, strategy development, process optimization, and more, we offer a holistic approach to business improvement.</p>
+        <p>Our methodology is rooted in a deep understanding of market dynamics and organizational behavior, ensuring solutions that are not only innovative but also actionable and sustainable. We partner with clients to realize their business potential and chart a path toward lasting success.</p>
+      </div>
     </div>
-    <p class="loading-text">Loading Content</p>
+    <div class="section-inner">
+      <section class="brand-etymology" aria-labelledby="brand-etymology-title">
+        <div class="brand-etymology-logo">
+          <img src="../assets/logo.png" alt="Catalysta Consultancy logo">
+        </div>
+        <div class="brand-etymology-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+          <h3 class="heading-maroon" id="brand-etymology-title">Brand Name Etymology</h3>
+          <p class="brand-etymology-description">A catalyst in business is a person or an agent that causes a change, action, or event to happen at a higher speed than the normal average time period. A catalyst is also a person who, through their actions, selflessly helps, mentors, influences, and guides others—professionally and/or personally—and inspires them to enjoy their life journey and make their lives fulfilling and better.</p>
+          <p class="brand-etymology-citation">Vaidya, R. (n.d.). <cite>Play the catalyst role in life</cite>. LinkedIn. <a href="https://www.linkedin.com/pulse/play-catalyst-role-life-ravindra-vaidya/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/pulse/play-catalyst-role-life-ravindra-vaidya/</a></p>
+        </div>
+      </section>
+      <section class="business-model" aria-labelledby="business-model-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+        <h3 class="heading-maroon" id="business-model-title">The Solo Consultant Model</h3>
+        <p class="business-model-description">CATALYSTA is a consultancy firm that specializes in assisting SMEs, professionals, and various entities seeking guidance in conducting business effectively. We also support existing businesses facing operational challenges, offering solutions to formalize their operations and gain a competitive advantage.</p>
+        <h4 class="business-model-services-title">Offered Services</h4>
+        <ul class="business-model-services">
+          <li><a href="services.html"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><path d="M7 5.5H5.5v15h13v-15H17"/><path d="m8.5 14 2.2 2.2 4.8-4.8"/></svg></span><span class="service-label">Business Review</span></a></li>
+          <li><a href="services.html"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M6 9v2.5h12V9M12 11.5V15"/></svg></span><span class="service-label">Business Processes</span></a></li>
+          <li><a href="services.html"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2c2.7 0 4.5 2 4.5 4.8"/></svg></span><span class="service-label">Managing Human Capital</span></a></li>
+        </ul>
+      </section>
+      <section class="brand-vision" aria-labelledby="brand-vision-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+        <h3 class="heading-maroon" id="brand-vision-title">Brand Vision, Mission, and Ambition</h3>
+        <div class="brand-pillars">
+          <article class="brand-vision-item">
+            <h4>Brand Vision</h4>
+            <p>Our Vision is to be the foremost authority in business management consultancy, driven to elevate SMEs and professionals with groundbreaking, principled strategies and solutions.</p>
+          </article>
+          <article class="brand-vision-item">
+            <h4>Brand Mission</h4>
+            <p>Our Mission is to significantly reduce our clients’ business risks by sharing our wealth of experience and knowledge in business management.</p>
+          </article>
+          <article class="brand-vision-item">
+            <h4>Brand Ambition</h4>
+            <p>Our ambition is to craft a future where our client's success stories are a testament to our commitment to excellence and collaborative innovation.</p>
+          </article>
+        </div>
+        <section class="core-values" aria-labelledby="core-values-title">
+          <h3 class="heading-maroon" id="core-values-title">Core Values</h3>
+          <div class="core-values-grid">
+            <article class="core-value">
+              <h4>Professionalism</h4>
+              <p>Maintaining high standards in all business dealings is a core value that CATALYSTA upholds. Professionalism, for CATALYSTA, means delivering services with integrity, respect, and a commitment to ethical practices. This ensures clients can trust the advice and solutions provided, knowing they are grounded in a deep understanding of business dynamics and ethical standards.</p>
+            </article>
+            <article class="core-value">
+              <h4>Service Oriented</h4>
+              <p>At CATALYSTA, we are guided by the value of being service-oriented, which is closely aligned with our mission of improving our clients' situations. Our commitment to this value is reflected in our approach of not just meeting our client's needs but also making a genuine effort to understand and empathize with them. We aim to provide effective solutions that not only nurture long-term relationships but also contribute to the success of our clients.</p>
+            </article>
+            <article class="core-value">
+              <h4>Innovative</h4>
+              <p>Innovation is a vital element in the field of business management consultancy, where staying ahead of market trends and developing creative solutions is essential. For CATALYSTA, this means continuously seeking new and improved ways to tackle clients' challenges, while also pushing beyond conventional methods to deliver more efficient and effective outcomes.</p>
+            </article>
+            <article class="core-value">
+              <h4>Knowledgeable</h4>
+              <p>At CATALYSTA, we prioritize being knowledgeable, which highlights our dedication to being well-informed and experienced. This value involves a continuous process of learning and staying up-to-date with the latest trends, technologies, and methodologies in business management. This approach ensures that the advice and solutions we offer to our clients are based on the most current and comprehensive information available.</p>
+            </article>
+            <article class="core-value">
+              <h4>Committed</h4>
+              <p>This value reflects the depth of dedication CATALYSTA has towards the success of its clients. It means fully investing in clients' goals and working tirelessly to help them achieve their objectives. This value signifies persisting through challenges and being a reliable, steadfast partner to clients throughout their business journey.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </div>
+  </section>
+
+  <section class="approach-section" id="our-approach" aria-labelledby="approach-title">
+    <div class="section-inner">
+      <div class="approach-intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Our Approach</div>
+        <h2 class="heading-maroon" id="approach-title">A Strategic Approach to Sustainable Growth</h2>
+        <p class="approach-lead">Every business is different. That's why we take a tailored, results-driven approach to helping organizations overcome challenges, unlock opportunities, and achieve their goals.</p>
+        <p>We combine strategic thinking, data-driven insights, and practical solutions to help businesses make confident decisions and build a strong foundation for long-term success. By understanding each client's unique needs, we develop strategies that align with their vision, strengthen their operations, and create measurable value.</p>
+      </div>
+      <h3 class="approach-steps-title">How We Work</h3>
+      <ol class="approach-steps">
+        <li class="approach-step">
+          <div class="approach-step-top">
+            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M8 10.5h5M10.5 8v5"/></svg></span>
+            <span class="approach-step-number" aria-hidden="true">01</span>
+          </div>
+          <h4>Understand</h4>
+          <p>We begin by listening to our clients, understanding their business objectives, and identifying the challenges and opportunities that matter most.</p>
+        </li>
+        <li class="approach-step">
+          <div class="approach-step-top">
+            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><path d="M12 3V1M12 23v-2M3 12H1M23 12h-2"/></svg></span>
+            <span class="approach-step-number" aria-hidden="true">02</span>
+          </div>
+          <h4>Strategize</h4>
+          <p>We translate insights into tailored strategies and actionable plans designed to address business needs and support long-term objectives.</p>
+        </li>
+        <li class="approach-step">
+          <div class="approach-step-top">
+            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></svg></span>
+            <span class="approach-step-number" aria-hidden="true">03</span>
+          </div>
+          <h4>Implement</h4>
+          <p>We work closely with our clients to turn strategies into action, streamline processes, and put practical solutions into place.</p>
+        </li>
+        <li class="approach-step">
+          <div class="approach-step-top">
+            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M4 16l5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span>
+            <span class="approach-step-number" aria-hidden="true">04</span>
+          </div>
+          <h4>Optimize</h4>
+          <p>We evaluate progress, identify areas for improvement, and refine our recommendations to help businesses adapt, grow, and sustain their results.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="team-section" id="our-team" aria-labelledby="team-title">
+    <div class="section-inner">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Our Team</div>
+      <h1 class="heading-maroon" id="team-title">Meet the Catalysta Team</h1>
+
+      <section class="team-category" aria-labelledby="owner-title">
+        <div class="owner-profile">
+          <img src="../assets/Pagkalinawan_Dina.png" alt="Portrait of Dina Pagkalinawan">
+          <div class="owner-profile-copy">
+            <h3 class="title">Dina Pagkalinawan</h3>
+            <p class="owner-profile-role">Owner &amp; Head of Catalysta</p>
+            <p>As the CEO of a business consultancy firm, she leads the company in 
+              providing strategic guidance and tailored solutions to help clients improve 
+              their operations, overcome challenges, and achieve their business goals. She 
+              oversees daily operations, manages her team, builds client relationships, and 
+              develops strategies to ensure the firm's growth and success.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-category" aria-labelledby="it-team-title">
+        <h2 class="heading-maroon" id="it-team-title">I.T. &amp; Development Team</h2>
+        <p class="team-intro">Meet the I.T. &amp; Development Team behind Catalysta.</p>
+        <div class="team-grid">
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Chlarence Suguitan, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/SUGUITAN_CHLARENCE.png" alt="Portrait of Chlarence Suguitan">
+              <div class="flip-card-caption"><h2 class="title">Chlarence Suguitan</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Chlarence E. Suguitan</h2>
+              <p>SCRUM Master &amp; Full-Stack Developer</p>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Czarina Goc, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/GOC,%20CZARINA.png" alt="Portrait of Czarina Goc">
+              <div class="flip-card-caption"><h2 class="title">Czarina Goc</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Czarina Angela A. Goc</h2>
+              <p>UI/UX Designer</p>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Jhunver Pilar, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/PILAR,%20JHUNVER.png" alt="Portrait of Jhunver Pilar">
+              <div class="flip-card-caption"><h2 class="title">Jhunver Pilar</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Jhunver S. Pilar</h2>
+              <p>Brand, Product, and Graphic Designer</p>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Chedrick Salazar, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/SALAZAR,%20CHEDRICK.png" alt="Portrait of Chedrick Salazar">
+              <div class="flip-card-caption"><h2 class="title">Chedrick Salazar</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Chedrick Ivan D.C. Salazar</h2>
+              <p>UI/UX Designer</p>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Enrico Villena, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/ENRICO_VILLENA.png" alt="Portrait of Enrico Villena">
+              <div class="flip-card-caption"><h2 class="title">Enrico Villena</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Enrico Villena</h2>
+              <p>Front-End Developer</p>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Dave Landicho, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/LANDICHO,%20DAVE.png" alt="Portrait of Dave Landicho">
+              <div class="flip-card-caption"><h2 class="title">Dave Landicho</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Dave Ivan M. Landicho</h2>
+              <p>Full-Stack Developer</p>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Jamie Walker Suansing, I.T. and Development Team member">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/SUANSING_JAMIE_WALKER.png" alt="Portrait of Jamie Walker Suansing">
+              <div class="flip-card-caption"><h2 class="title">Jamie Walker Suansing</h2><p>I.T. &amp; Development Team</p></div>
+            </div>
+            <div class="flip-card-back">
+              <h2 class="title">Jamie Walker Suansing</h2>
+              <p>Documentation Specialist</p>
+            </div>
+          </div>
+        </article>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<!-- PRODUCTS & CART (DISABLED) cart and checkout dialog. Remove the comment markers to re-enable.
+<dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartDialogTitle">
+  <div class="cart-dialog-content">
+    <header class="cart-dialog-header">
+      <h2 id="cartDialogTitle">Your cart</h2>
+      <button type="button" class="cart-close" data-cart-close aria-label="Close cart">&times;</button>
+    </header>
+    <p class="cart-status" id="cartStatus" role="status" aria-live="polite"></p>
+    <div class="cart-items" id="cartItems"></div>
+    <p class="cart-empty" id="cartEmpty">Your cart is empty.</p>
+    <a class="checkout-btn" id="cartEnquire" href="#checkout" aria-label="Checkout" hidden>
+      <span class="checkout-left" aria-hidden="true">
+        <span class="checkout-card"><span class="checkout-card-line"></span><span class="checkout-card-dots"></span></span>
+        <span class="checkout-post">
+          <span class="checkout-post-line"></span>
+          <span class="checkout-screen"><span class="checkout-dollar">$</span></span>
+          <span class="checkout-keys"></span>
+          <span class="checkout-keys checkout-keys-2"></span>
+        </span>
+      </span>
+      <span class="checkout-label">Checkout</span>
+    </a>
   </div>
-</section>
+</dialog>
+END PRODUCTS & CART (DISABLED) cart dialog -->
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer" id="contact">
@@ -76,6 +363,7 @@
       <a href="index.html#home">Home</a>
       <a href="about.html">About us</a>
       <a href="services.html">Services</a>
+      <!-- PRODUCTS & CART (DISABLED) <a href="products.html">Products</a> -->
       <a href="blogs.html">Blogs</a>
     </div>
 

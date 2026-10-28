@@ -20,10 +20,27 @@
     </a>
     <nav class="main-nav">
       <a href="#home">Home</a>
-      <a href="about.html">About us</a>
+      <div class="nav-dropdown">
+        <a href="about.html" class="nav-dropdown-trigger">About us <span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-dropdown-menu">
+          <a href="about.html#our-company">Our Company</a>
+          <a href="about.html#our-team">Our Team</a>
+          <a href="about.html#our-approach">Our Approach</a>
+        </div>
+      </div>
       <a href="services.html">Services</a>
+      <!-- PRODUCTS & CART (DISABLED) <a href="products.html">Products</a> -->
       <a href="blogs.html">Blogs</a>
     </nav>
+    <!-- PRODUCTS & CART (DISABLED) navbar cart button. Remove the comment markers to re-enable.
+    <button type="button" class="btn-cart" data-quantity="0" aria-label="Shopping cart, 0 items" title="Shopping cart">
+      <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+      </svg>
+      <span class="quantity" aria-hidden="true"></span>
+    </button>
+    END PRODUCTS & CART (DISABLED) cart button -->
+
     <a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -146,6 +163,32 @@
   </div>
 </section>
 
+<!-- PRODUCTS & CART (DISABLED) cart and checkout dialog. Remove the comment markers to re-enable.
+<dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartDialogTitle">
+  <div class="cart-dialog-content">
+    <header class="cart-dialog-header">
+      <h2 id="cartDialogTitle">Your cart</h2>
+      <button type="button" class="cart-close" data-cart-close aria-label="Close cart">&times;</button>
+    </header>
+    <p class="cart-status" id="cartStatus" role="status" aria-live="polite"></p>
+    <div class="cart-items" id="cartItems"></div>
+    <p class="cart-empty" id="cartEmpty">Your cart is empty.</p>
+    <a class="checkout-btn" id="cartEnquire" href="#checkout" aria-label="Checkout" hidden>
+      <span class="checkout-left" aria-hidden="true">
+        <span class="checkout-card"><span class="checkout-card-line"></span><span class="checkout-card-dots"></span></span>
+        <span class="checkout-post">
+          <span class="checkout-post-line"></span>
+          <span class="checkout-screen"><span class="checkout-dollar">$</span></span>
+          <span class="checkout-keys"></span>
+          <span class="checkout-keys checkout-keys-2"></span>
+        </span>
+      </span>
+      <span class="checkout-label">Checkout</span>
+    </a>
+  </div>
+</dialog>
+END PRODUCTS & CART (DISABLED) cart dialog -->
+
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer" id="contact">
   <div class="section-inner footer-grid">
@@ -167,6 +210,7 @@
       <a href="#home">Home</a>
       <a href="about.html">About us</a>
       <a href="services.html">Services</a>
+      <!-- PRODUCTS & CART (DISABLED) <a href="products.html">Products</a> -->
       <a href="blogs.html">Blogs</a>
     </div>
 
