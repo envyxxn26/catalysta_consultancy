@@ -88,6 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
+    // Touch devices: tapping the dropdown trigger toggles the submenu instead of navigating
+    const touchQuery = window.matchMedia('(hover: none), (pointer: coarse)');
+    header.querySelectorAll('.nav-dropdown-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        if (!touchQuery.matches) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        trigger.parentElement.classList.toggle('dropdown-open');
+      }, true);
+    });
+
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         setActiveNav(link);
