@@ -1,7 +1,6 @@
 // Catalysta — small interaction layer
 
 document.addEventListener('DOMContentLoaded', () => {
-
   /* Catalysta office photo carousel */
   const companyCarousel = document.querySelector('[data-company-carousel]');
 
@@ -210,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearBlogFilters = document.getElementById('clearBlogFilters');
   const blogArticles = document.querySelectorAll('.blog-article');
   const blogEmpty = document.getElementById('blogEmpty');
-  const blogResultsCount = document.getElementById('blogResultsCount');
 
   if (blogFilters && blogSearch && blogDate && clearBlogFilters && blogEmpty) {
     const filterArticles = () => {
@@ -228,9 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       blogEmpty.hidden = visibleCount > 0;
-      if (blogResultsCount) {
-        blogResultsCount.textContent = `${String(visibleCount).padStart(2, '0')} ${visibleCount === 1 ? 'article' : 'articles'}`;
-      }
     };
 
     blogFilters.addEventListener('submit', (event) => {
