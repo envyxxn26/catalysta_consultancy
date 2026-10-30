@@ -1,61 +1,57 @@
 // Catalysta — small interaction layer
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* Catalysta office photo carousel */
+  /* Catalysta office photo stack: clicking sends the front photo to the back */
   const companyCarousel = document.querySelector('[data-company-carousel]');
 
   if (companyCarousel) {
     const slides = Array.from(companyCarousel.querySelectorAll('.company-slide'));
-    const indicators = Array.from(companyCarousel.querySelectorAll('[data-carousel-slide]'));
-    const previousButton = companyCarousel.querySelector('[data-carousel-prev]');
-    const nextButton = companyCarousel.querySelector('[data-carousel-next]');
     const viewport = companyCarousel.querySelector('.company-carousel-viewport');
-    let activeSlide = 0;
-    let pointerStartX = null;
+    let order = slides.map((_, index) => index);
 
-    const showSlide = (index) => {
-      activeSlide = (index + slides.length) % slides.length;
-      slides.forEach((slide, slideIndex) => {
-        const isActive = slideIndex === activeSlide;
-        slide.classList.toggle('is-active', isActive);
-        slide.setAttribute('aria-hidden', String(!isActive));
+    const render = () => {
+      order.forEach((slideIndex, position) => {
+        const slide = slides[slideIndex];
+        const isFront = position === 0;
+        slide.dataset.pos = String(position);
+        slide.setAttribute('aria-hidden', String(!isFront));
         slide.querySelectorAll('a').forEach((link) => {
-          if (isActive) link.removeAttribute('tabindex');
+          if (isFront) link.removeAttribute('tabindex');
           else link.setAttribute('tabindex', '-1');
         });
-        slide.setAttribute('aria-label', `${slideIndex + 1} of ${slides.length}`);
-      });
-      indicators.forEach((indicator, slideIndex) => {
-        const isActive = slideIndex === activeSlide;
-        indicator.classList.toggle('is-active', isActive);
-        if (isActive) {
-          indicator.setAttribute('aria-current', 'true');
-        } else {
-          indicator.removeAttribute('aria-current');
-        }
       });
     };
 
-    previousButton?.addEventListener('click', () => showSlide(activeSlide - 1));
-    nextButton?.addEventListener('click', () => showSlide(activeSlide + 1));
-    indicators.forEach((indicator) => {
-      indicator.addEventListener('click', () => {
-        showSlide(Number(indicator.dataset.carouselSlide));
-      });
-    });
+    let isAnimating = false;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    viewport?.addEventListener('pointerdown', (event) => {
-      if (event.isPrimary && event.button === 0) pointerStartX = event.clientX;
+    const sendFrontToBack = () => {
+      if (isAnimating) return;
+      if (reducedMotion.matches) {
+        order.push(order.shift());
+        render();
+        return;
+      }
+      isAnimating = true;
+      const front = slides[order[0]];
+      front.classList.add('is-leaving');
+      setTimeout(() => {
+        order.push(order.shift());
+        render();
+        front.classList.remove('is-leaving');
+        setTimeout(() => { isAnimating = false; }, 450);
+      }, 320);
+    };
+
+    render();
+    viewport?.addEventListener('click', (event) => {
+      if (event.target.closest('a')) return;
+      sendFrontToBack();
     });
-    viewport?.addEventListener('pointerup', (event) => {
-      if (pointerStartX === null) return;
-      const swipeDistance = event.clientX - pointerStartX;
-      pointerStartX = null;
-      if (Math.abs(swipeDistance) < 40) return;
-      showSlide(activeSlide + (swipeDistance < 0 ? 1 : -1));
-    });
-    viewport?.addEventListener('pointercancel', () => {
-      pointerStartX = null;
+    viewport?.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      sendFrontToBack();
     });
   }
 

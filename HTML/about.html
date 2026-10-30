@@ -49,39 +49,35 @@
 </header>
 
 <main>
+  <section class="hero about-hero" aria-label="About Catalysta">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="about-hero-panel">
+        <h1 class="hero-title">About us</h1>
+        <div class="about-hero-divider" aria-hidden="true"></div>
+        <p class="about-hero-description">“Your agent of growth” symbolizes the company’s commitment to acting as a strategic partner in driving the business growth and success of its clients.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="company-section" id="our-company" aria-labelledby="company-title">
     <div class="section-inner company-grid">
       <div class="company-carousel" data-company-carousel role="region" aria-roledescription="carousel" aria-label="Catalysta office photos">
-        <div class="company-carousel-viewport">
-          <figure class="company-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+        <div class="company-carousel-viewport" tabindex="0" role="button" aria-label="Show next office photo">
+          <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
             <img src="../assets/Catalysta_Office.jpg" alt="Interior of the Catalysta office" draggable="false">
-            <figcaption class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer">Edifice Pinas</a></figcaption>
           </figure>
           <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
             <img src="../assets/Catalysta_Office(2).jpg" alt="Another view of the Catalysta office" draggable="false">
-            <figcaption class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer" tabindex="-1">Edifice Pinas</a></figcaption>
           </figure>
           <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
             <img src="../assets/Catalysta_Office(3).jpg" alt="A third view of the Catalysta office" draggable="false">
-            <figcaption class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer" tabindex="-1">Edifice Pinas</a></figcaption>
           </figure>
         </div>
-        <div class="company-carousel-controls" role="group" aria-label="Office photo controls">
-          <button class="company-carousel-arrow" type="button" data-carousel-prev aria-label="Previous office photo">
-            <span aria-hidden="true">&larr;</span>
-          </button>
-          <div class="company-carousel-dots" role="group" aria-label="Choose an office photo">
-            <button type="button" class="is-active" data-carousel-slide="0" aria-label="Show office photo 1 of 3" aria-current="true"></button>
-            <button type="button" data-carousel-slide="1" aria-label="Show office photo 2 of 3"></button>
-            <button type="button" data-carousel-slide="2" aria-label="Show office photo 3 of 3"></button>
-          </div>
-          <button class="company-carousel-arrow" type="button" data-carousel-next aria-label="Next office photo">
-            <span aria-hidden="true">&rarr;</span>
-          </button>
-        </div>
+        <p class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer">Edifice Pinas</a></p>
       </div>
       <div class="company-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Company</span></div>
         <h2 class="heading-maroon" id="company-title">Business transformation, built around you.</h2>
         <p>CATALYSTA stands at the forefront of business transformation. Our role as a business management consultancy firm goes beyond providing services; we aim to be architects of our client's success. Specializing in problem identification and analysis, strategy development, process optimization, and more, we offer a holistic approach to business improvement.</p>
         <p>Our methodology is rooted in a deep understanding of market dynamics and organizational behavior, ensuring solutions that are not only innovative but also actionable and sustainable. We partner with clients to realize their business potential and chart a path toward lasting success.</p>
@@ -93,14 +89,15 @@
           <img src="../assets/logo.png" alt="Catalysta Consultancy logo">
         </div>
         <div class="brand-etymology-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+          <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Company</span></div>
           <h3 class="heading-maroon" id="brand-etymology-title">Brand Name Etymology</h3>
           <p class="brand-etymology-description">A catalyst in business is a person or an agent that causes a change, action, or event to happen at a higher speed than the normal average time period. A catalyst is also a person who, through their actions, selflessly helps, mentors, influences, and guides others—professionally and/or personally—and inspires them to enjoy their life journey and make their lives fulfilling and better.</p>
           <p class="brand-etymology-citation">Vaidya, R. (n.d.). <cite>Play the catalyst role in life</cite>. LinkedIn. <a href="https://www.linkedin.com/pulse/play-catalyst-role-life-ravindra-vaidya/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/pulse/play-catalyst-role-life-ravindra-vaidya/</a></p>
         </div>
       </section>
       <section class="business-model" aria-labelledby="business-model-title">
-        <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
+        <img class="business-model-image" src="../assets/hero_about(2).png" alt="A consultant working at a laptop with a cup of coffee">
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Company</span></div>
         <h3 class="heading-maroon" id="business-model-title">The Solo Consultant Model</h3>
         <p class="business-model-description">CATALYSTA is a consultancy firm that specializes in assisting SMEs, professionals, and various entities seeking guidance in conducting business effectively. We also support existing businesses facing operational challenges, offering solutions to formalize their operations and gain a competitive advantage.</p>
         <h4 class="business-model-services-title">Offered Services</h4>
@@ -110,9 +107,14 @@
           <li><a href="services.html#service-people"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2c2.7 0 4.5 2 4.5 4.8"/></svg></span><span class="service-label">Managing Human Capital</span></a></li>
         </ul>
       </section>
-      <section class="brand-vision" aria-labelledby="brand-vision-title">
-        <div class="eyebrow"><span class="eyebrow-line"></span>Our Company</div>
-        <h3 class="heading-maroon" id="brand-vision-title">Brand Vision, Mission, and Ambition</h3>
+    </div>
+  </section>
+
+  <section class="vision-section" aria-labelledby="brand-vision-title">
+    <div class="section-inner">
+      <section class="brand-vision">
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Company's Values</span></div>
+        <h2 class="heading-maroon" id="brand-vision-title">Brand Vision, Mission, and Ambition</h2>
         <div class="brand-pillars">
           <article class="brand-vision-item">
             <h4>Brand Vision</h4>
@@ -159,7 +161,7 @@
   <section class="approach-section" id="our-approach" aria-labelledby="approach-title">
     <div class="section-inner">
       <div class="approach-intro">
-        <div class="eyebrow"><span class="eyebrow-line"></span>Our Approach</div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Approach</span></div>
         <h2 class="heading-maroon" id="approach-title">A Strategic Approach to Sustainable Growth</h2>
         <p class="approach-lead">Every business is different. That's why we take a tailored, results-driven approach to helping organizations overcome challenges, unlock opportunities, and achieve their goals.</p>
         <p>We combine strategic thinking, data-driven insights, and practical solutions to help businesses make confident decisions and build a strong foundation for long-term success. By understanding each client's unique needs, we develop strategies that align with their vision, strengthen their operations, and create measurable value.</p>
@@ -168,7 +170,7 @@
       <ol class="approach-steps">
         <li class="approach-step">
           <div class="approach-step-top">
-            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M8 10.5h5M10.5 8v5"/></svg></span>
+            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M8 10.5h5M10.5 8v5"/></svg></span>
             <span class="approach-step-number" aria-hidden="true">01</span>
           </div>
           <h4>Understand</h4>
@@ -192,7 +194,7 @@
         </li>
         <li class="approach-step">
           <div class="approach-step-top">
-            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M4 16l5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span>
+            <span class="approach-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M4 16l5-5 4 3 7-8M15 6h5v5"/></svg></span>
             <span class="approach-step-number" aria-hidden="true">04</span>
           </div>
           <h4>Optimize</h4>
@@ -215,97 +217,6 @@
             <p class="owner-profile-role">Owner &amp; Head of Catalysta</p>
             <p>As the CEO of a business consultancy firm, she leads the company in providing strategic guidance and tailored solutions to help clients improve their operations, overcome challenges, and achieve their business goals. She oversees daily operations, manages her team, builds client relationships, and develops strategies to ensure the firm's growth and success.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="team-category" aria-labelledby="it-team-title">
-        <h2 class="heading-maroon" id="it-team-title">I.T. &amp; Development Team</h2>
-        <p class="team-intro">Meet the I.T. &amp; Development Team behind Catalysta.</p>
-        <div class="team-grid">
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Chlarence Suguitan, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/SUGUITAN_CHLARENCE.png" alt="Portrait of Chlarence Suguitan">
-                <div class="flip-card-caption"><h2 class="title">Chlarence Suguitan</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Chlarence E. Suguitan</h2>
-                <p>SCRUM Master &amp; Full-Stack Developer</p>
-              </div>
-            </div>
-          </article>
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Czarina Goc, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/GOC,%20CZARINA.png" alt="Portrait of Czarina Goc">
-                <div class="flip-card-caption"><h2 class="title">Czarina Goc</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Czarina Angela A. Goc</h2>
-                <p>UI/UX Designer</p>
-              </div>
-            </div>
-          </article>
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Jhunver Pilar, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/PILAR,%20JHUNVER.png" alt="Portrait of Jhunver Pilar">
-                <div class="flip-card-caption"><h2 class="title">Jhunver Pilar</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Jhunver S. Pilar</h2>
-                <p>Brand, Product, and Graphic Designer</p>
-              </div>
-            </div>
-          </article>
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Chedrick Salazar, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/SALAZAR,%20CHEDRICK.png" alt="Portrait of Chedrick Salazar">
-                <div class="flip-card-caption"><h2 class="title">Chedrick Salazar</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Chedrick Ivan D.C. Salazar</h2>
-                <p>UI/UX Designer</p>
-              </div>
-            </div>
-          </article>
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Enrico Villena, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/ENRICO_VILLENA.png" alt="Portrait of Enrico Villena">
-                <div class="flip-card-caption"><h2 class="title">Enrico Villena</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Enrico Villena</h2>
-                <p>Front-End Developer</p>
-              </div>
-            </div>
-          </article>
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Dave Landicho, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/LANDICHO,%20DAVE.png" alt="Portrait of Dave Landicho">
-                <div class="flip-card-caption"><h2 class="title">Dave Landicho</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Dave Ivan M. Landicho</h2>
-                <p>Full-Stack Developer</p>
-              </div>
-            </div>
-          </article>
-          <article class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Jamie Walker Suansing, I.T. and Development Team member">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/SUANSING_JAMIE_WALKER.png" alt="Portrait of Jamie Walker Suansing">
-                <div class="flip-card-caption"><h2 class="title">Jamie Walker Suansing</h2><p>I.T. &amp; Development Team</p></div>
-              </div>
-              <div class="flip-card-back">
-                <h2 class="title">Jamie Walker Suansing</h2>
-                <p>Documentation Specialist</p>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
     </div>
@@ -345,12 +256,13 @@ END PRODUCTS & CART (DISABLED) cart dialog -->
       <a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
         <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
       </a>
-      <p class="footer-contact">(+63) 995 069 6769</p>
-      <p class="footer-contact">PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
+      <p class="footer-contact"><i class='bx bxs-map' aria-hidden="true"></i><span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</span></p>
+      <p class="footer-contact"><i class='bx bxs-envelope' aria-hidden="true"></i><a href="mailto:hello@catalysta.com">hello@catalysta.com</a></p>
+      <p class="footer-contact"><i class='bx bxs-phone' aria-hidden="true"></i><span>(+63) 995 069 6769</span></p>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook"><img src="../assets/facebook_icon.png" alt=""></a>
-        <a href="#" aria-label="Instagram"><img src="../assets/instagram_icon.png" alt=""></a>
-        <a href="#" aria-label="X"><img src="../assets/x_icon.png" alt=""></a>
+        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook' aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class='bx bxl-instagram' aria-hidden="true"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
       </div>
     </div>
 
