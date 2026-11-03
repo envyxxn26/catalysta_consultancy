@@ -1,7 +1,7 @@
 // Catalysta — small interaction layer
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* Catalysta office photo stack: clicking sends the front photo to the back */
+  /* About page: office photo carousel */
   const companyCarousel = document.querySelector('[data-company-carousel]');
 
   if (companyCarousel) {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Team card flip toggle */
+  /* About page: interactive team profile cards */
   document.querySelectorAll('.flip-card[role="button"]').forEach((card) => {
     const toggleCard = () => {
       const isFlipped = card.classList.toggle('is-flipped');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* Mobile nav toggle */
+  /* Shared header: mobile menu, dropdowns, active links, and page transitions */
   const header = document.querySelector('.site-header');
   const navToggle = document.getElementById('navToggle');
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Fade between document pages while keeping same-page anchors immediate.
+    // Shared navigation: fade between pages while leaving same-page anchors immediate.
     document.querySelectorAll('a[href]').forEach((link) => {
       link.addEventListener('click', (event) => {
         const destination = new URL(link.href, window.location.href);
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Contact form — placeholder submit handling (no backend wired up yet) */
+  /* Shared contact form placeholder; connect a backend before relying on submissions. */
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
 
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   END PRODUCTS & CART (DISABLED) — contact prefill */
 
-  /* Blog filters */
+  /* Blogs page: filter article cards by search text and publication date */
   const blogFilters = document.getElementById('blogFilters');
   const blogSearch = document.getElementById('blogSearch');
   const blogDate = document.getElementById('blogDate');
