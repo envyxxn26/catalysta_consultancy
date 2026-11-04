@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Document metadata and shared page assets -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Catalysta business consultancy services.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../CSS/styles.css">
 	<title>Services | Catalysta Business Consultancy Firm</title>
@@ -20,10 +22,19 @@
 		</a>
 		<nav class="main-nav">
 			<a href="index.html#home">Home</a>
-			<a href="about.html">About us</a>
+			<div class="nav-dropdown">
+				<a href="about.html" class="nav-dropdown-trigger">About us <span class="nav-caret" aria-hidden="true"></span></a>
+				<div class="nav-dropdown-menu">
+					<a href="about.html#our-company">Our Company</a>
+					<a href="about.html#our-team">Our Team</a>
+					<a href="about.html#our-approach">Our Approach</a>
+				</div>
+			</div>
 			<a href="services.html" class="active" aria-current="page">Services</a>
 			<a href="blogs.html">Blogs</a>
 		</nav>
+
+		<!-- Primary contact action and mobile navigation toggle -->
 		<a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
 		<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
 			<span></span><span></span><span></span>
@@ -31,29 +42,80 @@
 	</div>
 </header>
 
-<section class="loading-content-shell" aria-live="polite" aria-busy="true">
-	<div class="loading-content">
-		<div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-			<div class="wheel"></div>
-			<div class="hamster">
-				<div class="hamster__body">
-					<div class="hamster__head">
-						<div class="hamster__ear"></div>
-						<div class="hamster__eye"></div>
-						<div class="hamster__nose"></div>
-					</div>
-					<div class="hamster__limb hamster__limb--fr"></div>
-					<div class="hamster__limb hamster__limb--fl"></div>
-					<div class="hamster__limb hamster__limb--br"></div>
-					<div class="hamster__limb hamster__limb--bl"></div>
-					<div class="hamster__tail"></div>
-				</div>
-			</div>
-			<div class="spoke"></div>
+<main class="sv-page">
+	<!-- Services introduction and overview image -->
+	<section class="sv-hero">
+		<div class="sv-hero-l">
+			<div class="sv-tag">From Groundwork to Growth</div>
+			<p>CATALYSTA: What they do and how they help businesses<br>Good growth is built from the inside out. CATALYSTA helps SMEs, professionals, and organizations understand what is holding them back—and put the right foundations in place to move forward.</p>
+			<a class="services-read-link" href="#service-review">Explore the three disciplines <span aria-hidden="true">↓</span></a>
 		</div>
-		<p class="loading-text">Loading Content</p>
+		<div class="sv-frame"><img class="sv-photo" src="../assets/hero_4.jpg" alt="Catalysta consultants at work"></div>
+	</section>
+
+	<!-- Business review service -->
+	<section class="sv-band dark" id="service-review">
+		<div class="sv-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h5l2.5-7 4 14 2.5-7h6"/></svg></div>
+		<h2>Business Review</h2>
+		<p class="sv-intro">Think of a Business Review as a check-up for a company. Before you can fix something, you need to know what is actually wrong. CATALYSTA looks across the business to identify what is working, what is getting in the way, and what deserves attention first.</p>
+		<div class="sv-grid sv-g4">
+			<div class="sv-item"><h3><s>01</s>Financial health</h3><p>Understand where money comes from and goes, and whether the business is earning enough to sustain its ambitions.</p></div>
+			<div class="sv-item"><h3><s>02</s>Day-to-day operations</h3><p>Look at how work gets done and where time, effort, or resources may be going to waste.</p></div>
+			<div class="sv-item"><h3><s>03</s>Market position</h3><p>Consider how the business compares with competitors and what customers are really looking for.</p></div>
+			<div class="sv-item"><h3><s>04</s>Legal and compliance gaps</h3><p>Check whether permits, records, and business structures are in place—areas that are often overlooked by small businesses</p></div>
+		</div>
+	</section>
+
+	<!-- Business processes service -->
+	<section class="sv-band light">
+		<div class="sv-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="14" height="14" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12M11 8h6M11 12h6"/></svg></div>
+		<h2>Business Proposal</h2>
+		<p class="sv-intro">“That’s how we’ve always done it” can work—until a business grows. When knowledge lives with one person and every task is handled differently, the work becomes harder to manage. CATALYSTA helps turn informal routines into clear, reliable systems.</p>
+		<div class="sv-grid sv-g5">
+			<div class="sv-item"><h3><s>01</s>Map the workflow</h3><p>Trace how work moves from start to finish, such as taking an order, delivering it, and getting paid.</p></div>
+			<div class="sv-item"><h3><s>02</s>Remove bottlenecks</h3><p>Find delays, duplicated effort, and unnecessary steps to help tasks move faster and use resources well.</p></div>
+			<div class="sv-item"><h3><s>03</s>Document the standard</h3><p>Create standard operating procedures (SOPs) so people know what to do and quality stays consistent.</p></div>
+			<div class="sv-item"><h3><s>04</s>Put controls in place</h3><p>Set up practical approvals, record-keeping, and performance indicators to make progress visible.</p></div>
+			<div class="sv-item"><h3><s>05</s>Formalize the business</h3><p>Support legal and tax readiness, while building credibility with banks, partners, and larger clients.</p></div>
+		</div>
+	</section>
+
+	<!-- Human capital service -->
+	<section class="sv-band dark">
+		<div class="sv-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/><path d="M6 20c0-3.5 2.7-6 6-6s6 2.5 6 6M1 18c0-2 1.5-3.5 4-3.5M23 18c0-2-1.5-3.5-4-3.5"/></svg></div>
+		<h2>Managing Human Capital</h2>
+		<p class="sv-intro">Human capital is the people who work in a business—their skills, experience, and potential. Employees are often a company’s greatest asset and one of its biggest investments. Managing that investment well helps both people and the business perform at their best.</p>
+		<div class="sv-grid sv-g3">
+			<div class="sv-item"><h3><s>01</s>Organizational structure</h3><p>Clarify roles, reporting lines, and responsibilities so everyone understands how they contribute.</p></div>
+			<div class="sv-item"><h3><s>02</s>Hiring and onboarding</h3><p>Find people who fit the work and help new team members get up to speed sooner.</p></div>
+			<div class="sv-item"><h3><s>03</s>Performance management</h3><p>Set clear goals and create fair, useful ways to review progress.</p></div>
+			<div class="sv-item"><h3><s>04</s>Pay, benefits, and HR policies</h3><p>Build people practices that are competitive while remaining realistic for the company’s budget.</p></div>
+			<div class="sv-item"><h3><s>05</s>Training and development</h3><p>Grow skills and prepare future leaders from within the organization.</p></div>
+			<div class="sv-item"><h3><s>06</s>Company culture</h3><p>Support an engaged, motivated team—and give good people reasons to stay.</p></div>
+		</div>
+	</section>
+
+	<div class="services-page-inner">
+	<!-- How the three service areas work together -->
+	<section class="services-connection" id="services-together" aria-labelledby="services-connection-title">
+		<div class="services-connection-heading">
+			<p class="services-kicker">A joined-up approach</p>
+			<h2 id="services-connection-title">Three disciplines.<br><em>One stronger business.</em></h2>
+		</div>
+		<div class="services-connection-copy">
+			<p>These services work best together. A Business Review reveals the issues. Business Processes improves how work gets done. Managing Human Capital helps ensure the right people are ready to do it.</p>
+			<p>Choose one service or bring them together around what your business needs. The goal is the same: become more organized, more professional, and more competitive.</p>
+			<a href="contact.html" class="btn btn-pill btn-maroon">Talk about your next step <span class="arrow">↗</span></a>
+		</div>
+		<div class="services-connection-flow" aria-label="Business Review creates clarity, Business Processes builds systems, and Managing Human Capital enables people">
+			<span>Clarity <small>Business Review</small></span><i aria-hidden="true">→</i>
+			<span>Systems <small>Business Processes</small></span><i aria-hidden="true">→</i>
+			<span>People <small>Human Capital</small></span>
+		</div>
+	</section>
 	</div>
-</section>
+</main>
+
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer" id="contact">
@@ -62,12 +124,13 @@
 			<a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
 				<img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
 			</a>
-			<p class="footer-contact">(+63) 995 069 6769</p>
-			<p class="footer-contact">PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</p>
+			<p class="footer-contact"><i class='bx bxs-map' aria-hidden="true"></i><span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</span></p>
+			<p class="footer-contact"><i class='bx bxs-envelope' aria-hidden="true"></i><a href="mailto:hello@catalysta.com">hello@catalysta.com</a></p>
+			<p class="footer-contact"><i class='bx bxs-phone' aria-hidden="true"></i><span>(+63) 995 069 6769</span></p>
 			<div class="footer-social">
-				<a href="#" aria-label="Facebook"><img src="../assets/facebook_icon.png" alt=""></a>
-				<a href="#" aria-label="Instagram"><img src="../assets/instagram_icon.png" alt=""></a>
-				<a href="#" aria-label="X"><img src="../assets/x_icon.png" alt=""></a>
+				<a href="#" aria-label="Facebook"><i class='bx bxl-facebook' aria-hidden="true"></i></a>
+				<a href="#" aria-label="Instagram"><i class='bx bxl-instagram' aria-hidden="true"></i></a>
+				<a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
 			</div>
 		</div>
 

@@ -1,8 +1,61 @@
 // Catalysta — small interaction layer
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* About page: office photo carousel */
+  const companyCarousel = document.querySelector('[data-company-carousel]');
 
-  /* Mobile nav toggle */
+  if (companyCarousel) {
+    const slides = Array.from(companyCarousel.querySelectorAll('.company-slide'));
+    const viewport = companyCarousel.querySelector('.company-carousel-viewport');
+    let order = slides.map((_, index) => index);
+
+    const render = () => {
+      order.forEach((slideIndex, position) => {
+        const slide = slides[slideIndex];
+        const isFront = position === 0;
+        slide.dataset.pos = String(position);
+        slide.setAttribute('aria-hidden', String(!isFront));
+        slide.querySelectorAll('a').forEach((link) => {
+          if (isFront) link.removeAttribute('tabindex');
+          else link.setAttribute('tabindex', '-1');
+        });
+      });
+    };
+
+    let isAnimating = false;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const sendFrontToBack = () => {
+      if (isAnimating) return;
+      if (reducedMotion.matches) {
+        order.push(order.shift());
+        render();
+        return;
+      }
+      isAnimating = true;
+      const front = slides[order[0]];
+      front.classList.add('is-leaving');
+      setTimeout(() => {
+        order.push(order.shift());
+        render();
+        front.classList.remove('is-leaving');
+        setTimeout(() => { isAnimating = false; }, 450);
+      }, 320);
+    };
+
+    render();
+    viewport?.addEventListener('click', (event) => {
+      if (event.target.closest('a')) return;
+      sendFrontToBack();
+    });
+    viewport?.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      sendFrontToBack();
+    });
+  }
+
+  /* Shared header: mobile menu, dropdowns, active links, and page transitions */
   const header = document.querySelector('.site-header');
   const navToggle = document.getElementById('navToggle');
 
@@ -16,6 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
+    // Touch devices: tapping the dropdown trigger toggles the submenu instead of navigating
+    const touchQuery = window.matchMedia('(hover: none), (pointer: coarse)');
+    header.querySelectorAll('.nav-dropdown-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        if (!touchQuery.matches) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        trigger.parentElement.classList.toggle('dropdown-open');
+      }, true);
+    });
+
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         setActiveNav(link);
@@ -24,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Fade between document pages while keeping same-page anchors immediate.
+    // Shared navigation: fade between pages while leaving same-page anchors immediate.
     document.querySelectorAll('a[href]').forEach((link) => {
       link.addEventListener('click', (event) => {
         const destination = new URL(link.href, window.location.href);
@@ -74,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Contact form — placeholder submit handling (no backend wired up yet) */
+  /* Shared contact form placeholder; connect a backend before relying on submissions. */
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
 
@@ -96,14 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Blog filters */
+  /* Blogs page: filter article cards by search text and publication date */
   const blogFilters = document.getElementById('blogFilters');
   const blogSearch = document.getElementById('blogSearch');
   const blogDate = document.getElementById('blogDate');
   const clearBlogFilters = document.getElementById('clearBlogFilters');
   const blogArticles = document.querySelectorAll('.blog-article');
   const blogEmpty = document.getElementById('blogEmpty');
-  const blogResultsCount = document.getElementById('blogResultsCount');
 
   if (blogFilters && blogSearch && blogDate && clearBlogFilters && blogEmpty) {
     const filterArticles = () => {
@@ -121,9 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       blogEmpty.hidden = visibleCount > 0;
-      if (blogResultsCount) {
-        blogResultsCount.textContent = `${String(visibleCount).padStart(2, '0')} ${visibleCount === 1 ? 'article' : 'articles'}`;
-      }
     };
 
     blogFilters.addEventListener('submit', (event) => {
