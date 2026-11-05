@@ -1,0 +1,73 @@
+<%- include('partials/head', { title: "Blogs | Catalysta", description: null }) %>
+<body>
+<%- include('partials/header', { activePage: 'blogs' }) %>
+<!-- Shared site header and navigation -->
+
+
+<main>
+	<!-- Blog library: search/date filters and article cards -->
+	<section class="blog-library" aria-labelledby="articles-title">
+		<div class="section-inner">
+			<div class="blog-library-head">
+				<div>
+					<div class="eyebrow blog-library-label"><span class="eyebrow-line"></span><span class="eyebrow-text">Latest thinking</span></div>
+					<h2 id="articles-title">Articles</h2>
+				</div>
+			</div>
+			<form class="blog-controls" id="blogFilters" role="search">
+				<div class="blog-search-field">
+					<label for="blogSearch">Search articles</label>
+					<input type="search" id="blogSearch" name="search" placeholder="Search articles">
+				</div>
+				<div class="blog-date-field">
+					<label for="blogDate">Published date</label>
+					<input type="date" id="blogDate" name="date">
+				</div>
+				<button type="submit" class="blog-search-button" aria-label="Search articles"><i class='bx bx-search' aria-hidden="true"></i></button>
+				<button type="button" class="blog-clear-button" id="clearBlogFilters">Clear</button>
+			</form>
+			<div class="blog-list" id="blogList">
+				<article class="story-card story-card--with-image blog-article" data-title="Why McKinley West Drives Business Growth in Taguig" data-date="2025-10-23">
+					<div class="story-image">
+						<img src="/assets/blog_1.png" alt="McKinley West business district">
+					</div>
+					<div class="story-content">
+						<p class="story-kicker">Business <span></span> Real Estate</p>
+						<h2>Why McKinley West Drives <em>Business Growth</em> in Taguig</h2>
+						<div class="story-rule"></div>
+						<p class="story-excerpt">For the modern executive, the question is no longer where to work—it’s where to grow.</p>
+						<p class="story-excerpt">In the south-edge of Bonifacio Global City, a new district is quietly reshaping how businesses think about real estate, infrastructure, and urban resilience: McKinley West.</p>
+						<div class="story-footer">
+							<p>By Jhazel Tabafunda <span>Oct 23, 2025</span></p>
+							<a href="https://kmc.solutions/ph/blogs/central-business-districts/mckinley-west-business-growth-taguig" class="text-link" target="_blank" rel="noopener noreferrer">Read article <span aria-hidden="true">↗</span></a>
+						</div>
+					</div>
+				</article>
+				<article class="story-card story-card--with-image blog-article" data-title="Taguig reviews health programs for 1.3 million residents" data-date="2026-10-21">
+					<div class="story-image story-image--health">
+						<img src="/assets/blog_2.jpg" alt="Taguig City healthcare programs">
+					</div>
+					<div class="story-content">
+						<p class="story-kicker">Community <span></span> Health</p>
+						<h2>Taguig reviews health programs for <em>1.3 million residents</em></h2>
+						<div class="story-rule"></div>
+						<p class="story-excerpt">Taguig City Mayor Lani Cayetano continues to strengthen healthcare programs for the city’s 1.3 million residents through a series of implementation reviews and symposiums focused on key health services.</p>
+						<div class="story-footer">
+							<p>Published <span>2 weeks ago</span></p>
+							<a href="https://taguig.metronewscentral.net/taguig/metro-cities/taguig-reviews-health-programs-for-13-million-residents" class="text-link" target="_blank" rel="noopener noreferrer">Read article <span aria-hidden="true">↗</span></a>
+						</div>
+					</div>
+				</article>
+			</div>
+			<p class="blog-empty" id="blogEmpty" hidden>No articles match your search.</p>
+		</div>
+	</section>
+
+</main>
+
+
+<!-- ===================== FOOTER ===================== -->
+<%- include('partials/footer') %>
+<script src="/JS/script.js" defer></script>
+</body>
+</html>

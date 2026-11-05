@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo" aria-label="Catalysta home">
+      <img src="/assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
+    </a>
+    <nav class="main-nav">
+      <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>"<% if (activePage === 'home') { %> aria-current="page"<% } %>>Home</a>
+      <div class="nav-dropdown">
+        <a href="/about" class="nav-dropdown-trigger<%= activePage === 'about' ? ' active' : '' %>"<% if (activePage === 'about') { %> aria-current="page"<% } %>>About us <span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-dropdown-menu">
+          <a href="/about#our-company">Our Company</a>
+          <a href="/about#our-team">Our Team</a>
+          <a href="/about#our-approach">Our Approach</a>
+        </div>
+      </div>
+      <a href="/services" class="<%= activePage === 'services' ? 'active' : '' %>"<% if (activePage === 'services') { %> aria-current="page"<% } %>>Services</a>
+      <a href="/blogs" class="<%= activePage === 'blogs' ? 'active' : '' %>"<% if (activePage === 'blogs') { %> aria-current="page"<% } %>>Blogs</a>
+    </nav>
+    <a href="/contact" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

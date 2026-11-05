@@ -1,46 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<!-- Document metadata and shared page assets -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Catalysta business consultancy services.">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../CSS/styles.css">
-	<title>Services | Catalysta Business Consultancy Firm</title>
-</head>
+<%- include('partials/head', { title: "Services | Catalysta Business Consultancy Firm", description: "Catalysta business consultancy services." }) %>
 <body>
-
+<%- include('partials/header', { activePage: 'services' }) %>
 <!-- ===================== NAVBAR ===================== -->
-<header class="site-header">
-	<div class="nav-wrap">
-		<a href="index.html" class="logo" aria-label="Catalysta home">
-			<img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
-		</a>
-		<nav class="main-nav">
-			<a href="index.html#home">Home</a>
-			<div class="nav-dropdown">
-				<a href="about.html" class="nav-dropdown-trigger">About us <span class="nav-caret" aria-hidden="true"></span></a>
-				<div class="nav-dropdown-menu">
-					<a href="about.html#our-company">Our Company</a>
-					<a href="about.html#our-team">Our Team</a>
-					<a href="about.html#our-approach">Our Approach</a>
-				</div>
-			</div>
-			<a href="services.html" class="active" aria-current="page">Services</a>
-			<a href="blogs.html">Blogs</a>
-		</nav>
 
-		<!-- Primary contact action and mobile navigation toggle -->
-		<a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
-		<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-			<span></span><span></span><span></span>
-		</button>
-	</div>
-</header>
 
 <main class="sv-page">
 	<!-- Services introduction and overview image -->
@@ -50,7 +12,7 @@
 			<p>CATALYSTA: What they do and how they help businesses<br>Good growth is built from the inside out. CATALYSTA helps SMEs, professionals, and organizations understand what is holding them back—and put the right foundations in place to move forward.</p>
 			<a class="services-read-link" href="#service-review">Explore the three disciplines <span aria-hidden="true">↓</span></a>
 		</div>
-		<div class="sv-frame"><img class="sv-photo" src="../assets/hero_4.jpg" alt="Catalysta consultants at work"></div>
+		<div class="sv-frame"><img class="sv-photo" src="/assets/hero_4.jpg" alt="Catalysta consultants at work"></div>
 	</section>
 
 	<!-- Business review service -->
@@ -105,7 +67,7 @@
 		<div class="services-connection-copy">
 			<p>These services work best together. A Business Review reveals the issues. Business Processes improves how work gets done. Managing Human Capital helps ensure the right people are ready to do it.</p>
 			<p>Choose one service or bring them together around what your business needs. The goal is the same: become more organized, more professional, and more competitive.</p>
-			<a href="contact.html" class="btn btn-pill btn-maroon">Talk about your next step <span class="arrow">↗</span></a>
+			<a href="/contact" class="btn btn-pill btn-maroon">Talk about your next step <span class="arrow">↗</span></a>
 		</div>
 		<div class="services-connection-flow" aria-label="Business Review creates clarity, Business Processes builds systems, and Managing Human Capital enables people">
 			<span>Clarity <small>Business Review</small></span><i aria-hidden="true">→</i>
@@ -118,45 +80,7 @@
 
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" id="contact">
-	<div class="section-inner footer-grid">
-		<div class="footer-brand">
-			<a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
-				<img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
-			</a>
-			<p class="footer-contact"><i class='bx bxs-map' aria-hidden="true"></i><span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</span></p>
-			<p class="footer-contact"><i class='bx bxs-envelope' aria-hidden="true"></i><a href="mailto:hello@catalysta.com">hello@catalysta.com</a></p>
-			<p class="footer-contact"><i class='bx bxs-phone' aria-hidden="true"></i><span>(+63) 995 069 6769</span></p>
-			<div class="footer-social">
-				<a href="#" aria-label="Facebook"><i class='bx bxl-facebook' aria-hidden="true"></i></a>
-				<a href="#" aria-label="Instagram"><i class='bx bxl-instagram' aria-hidden="true"></i></a>
-				<a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
-			</div>
-		</div>
-
-		<div class="footer-links">
-			<h4>Links</h4>
-			<a href="index.html#home">Home</a>
-			<a href="about.html">About us</a>
-			<a href="services.html">Services</a>
-			<a href="blogs.html">Blogs</a>
-		</div>
-
-		<div class="footer-form">
-			<h4>Contact us</h4>
-			<form id="contactForm" novalidate>
-				<label for="email">Email</label>
-				<input type="email" id="email" name="email" required>
-				<label for="message">Message</label>
-				<textarea id="message" name="message" rows="3" required></textarea>
-				<button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
-				<p class="form-status" id="formStatus" role="status"></p>
-			</form>
-		</div>
-	</div>
-	<div class="footer-bottom">© 2026 Catalysta Consultancy</div>
-</footer>
-
-<script src="../JS/script.js"></script>
+<%- include('partials/footer') %>
+<script src="/JS/script.js" defer></script>
 </body>
 </html>

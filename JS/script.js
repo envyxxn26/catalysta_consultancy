@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Shared contact form placeholder; connect a backend before relying on submissions. */
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
+  const form = document.getElementById('contactFormFooter');
+  const status = document.getElementById('footerFormStatus');
 
   if (form && status) {
     form.addEventListener('submit', (e) => {
@@ -175,7 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let visibleCount = 0;
 
       blogArticles.forEach((article) => {
-        const matchesSearch = article.dataset.title.toLowerCase().includes(searchTerm);
+        const searchableText = article.textContent.toLowerCase();
+        const matchesSearch = searchableText.includes(searchTerm);
         const matchesDate = !selectedDate || article.dataset.date === selectedDate;
         const isVisible = matchesSearch && matchesDate;
 

@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Document metadata and shared page assets -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catalysta | Business Consultancy</title>
-<link rel="stylesheet" href="../CSS/styles.css">
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-</head>
+<%- include('partials/head', { title: "Catalysta | Business Consultancy", description: null }) %>
 <body>
-
+<%- include('partials/header', { activePage: 'home' }) %>
 <!-- ===================== NAVBAR ===================== -->
-<header class="site-header">
-  <div class="nav-wrap">
-    <a href="#" class="logo" aria-label="Catalysta home">
-      <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
-    </a>
-    <nav class="main-nav">
-      <a href="#home">Home</a>
-      <div class="nav-dropdown">
-        <a href="about.html" class="nav-dropdown-trigger">About us <span class="nav-caret" aria-hidden="true"></span></a>
-        <div class="nav-dropdown-menu">
-          <a href="about.html#our-company">Our Company</a>
-          <a href="about.html#our-team">Our Team</a>
-          <a href="about.html#our-approach">Our Approach</a>
-        </div>
-      </div>
-      <a href="services.html">Services</a>
-      <a href="blogs.html">Blogs</a>
-    </nav>
 
-    <!-- Primary contact action and mobile navigation toggle -->
-    <a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
 
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="home">
@@ -48,7 +11,7 @@
     <h1 class="hero-title">Make the next move matter.</h1>
     <p class="hero-subtitle">Agent for Growth</p>
     <p class="hero-text">“Your agent of growth” symbolizes the company’s commitment to acting as a strategic partner in driving the<br>business growth and success of its clients.</p>
-    <a href="contact.html" class="btn btn-pill btn-maroon">Let's talk <span class="arrow">→</span></a>
+    <a href="/contact" class="btn btn-pill btn-maroon">Let's talk <span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -62,7 +25,7 @@
       <p class="heading-script">We're your Growth partner</p>
       <p class="body-text">CATALYSTA stands at the forefront of business transformation. Our role as a business management consultancy firm goes beyond providing services; we aim to be architects of our client's success. Specializing in problem identification and analysis, strategy development, process optimization, and more, we offer a holistic approach to business improvement.</p>
       <p class="body-text">Our methodology is rooted in a deep understanding of market dynamics and organizational behavior, ensuring solutions that are not only innovative but also actionable and sustainable. We partner with clients to realize their business potential and chart a path toward lasting success.</p>
-      <a href="services.html" class="btn btn-pill btn-maroon">Discover more <span class="arrow">↗</span></a>
+      <a href="/services" class="btn btn-pill btn-maroon">Discover more <span class="arrow">↗</span></a>
     </div>
     <div class="about-media placeholder-img" aria-label="Catalysta office and meeting room photo"></div>
   </div>
@@ -115,17 +78,17 @@
       <article class="diff-card">
         <h3><span class="diff-index">01</span><span class="diff-sep">|</span>Business Review</h3>
         <p>Assessing priorities, performance &amp; opportunities</p>
-        <a href="services.html#service-review" class="btn btn-pill btn-accent-soft">See more <span class="arrow">↗</span></a>
+        <a href="/services#service-review" class="btn btn-pill btn-accent-soft">See more <span class="arrow">↗</span></a>
       </article>
       <article class="diff-card">
         <h3><span class="diff-index">02</span><span class="diff-sep">|</span>Business Proposal</h3>
         <p>Building clear, efficient &amp; effective workflows</p>
-        <a href="services.html#service-proposal" class="btn btn-pill btn-accent-soft">See more <span class="arrow">↗</span></a>
+        <a href="/services#service-proposal" class="btn btn-pill btn-accent-soft">See more <span class="arrow">↗</span></a>
       </article>
       <article class="diff-card">
         <h3><span class="diff-index">03</span><span class="diff-sep">|</span>Managing Human Capital</h3>
         <p>Supporting people, role &amp; organizational growth</p>
-        <a href="services.html#service-human-capital" class="btn btn-pill btn-accent-soft">See more <span class="arrow">↗</span></a>
+        <a href="/services#service-human-capital" class="btn btn-pill btn-accent-soft">See more <span class="arrow">↗</span></a>
       </article>
     </div>
   </div>
@@ -143,7 +106,7 @@
       <p class="heading-script">a living pattern</p>
       <p class="body-text">The story of the Louis Vuitton Monogram, unmistakable in its presence and timeless in its allure, told through three different perspectives.</p>
       <p class="card__meta card__meta--byline">By Tobias Jared Tomas · May 11, 2026</p>
-      <a href="blogs.html" class="btn btn-pill btn-maroon">Read more blogs <span class="arrow">↗</span></a>
+      <a href="/blogs" class="btn btn-pill btn-maroon">Read more blogs <span class="arrow">↗</span></a>
     </div>
   </div>
 </section>
@@ -156,51 +119,13 @@
       <h2>Have a business in mind?</h2>
       <p class="cta-text">Let's turn your visions into reality.</p>
     </div>
-    <a href="contact.html" class="btn btn-pill btn-accent">Work with us <span class="arrow">↗</span></a>
+    <a href="/contact" class="btn btn-pill btn-accent">Work with us <span class="arrow">↗</span></a>
   </div>
 </section>
 
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" id="contact">
-  <div class="section-inner footer-grid">
-    <div class="footer-brand">
-      <a href="#" class="logo footer-logo" aria-label="Catalysta home">
-        <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
-      </a>
-      <p class="footer-contact"><i class='bx bxs-map' aria-hidden="true"></i><span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</span></p>
-      <p class="footer-contact"><i class='bx bxs-envelope' aria-hidden="true"></i><a href="mailto:hello@catalysta.com">hello@catalysta.com</a></p>
-      <p class="footer-contact"><i class='bx bxs-phone' aria-hidden="true"></i><span>(+63) 995 069 6769</span></p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook' aria-hidden="true"></i></a>
-        <a href="#" aria-label="Instagram"><i class='bx bxl-instagram' aria-hidden="true"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-links">
-      <h4>Links</h4>
-      <a href="#home">Home</a>
-      <a href="about.html">About us</a>
-      <a href="services.html">Services</a>
-      <a href="blogs.html">Blogs</a>
-    </div>
-
-    <div class="footer-form">
-      <h4>Contact us</h4>
-      <form id="contactForm" novalidate>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="3" required></textarea>
-        <button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
-        <p class="form-status" id="formStatus" role="status"></p>
-      </form>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Catalysta Consultancy</div>
-</footer>
-
-<script src="../JS/script.js"></script>
+<%- include('partials/footer') %>
+<script src="/JS/script.js" defer></script>
 </body>
 </html>

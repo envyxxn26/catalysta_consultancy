@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Document metadata and shared page assets -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Catalysta Consultancy</title>
-<link rel="stylesheet" href="../CSS/styles.css">
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-</head>
+<%- include('partials/head', { title: "About Us - Catalysta Consultancy", description: null }) %>
 <body>
-
+<%- include('partials/header', { activePage: 'about' }) %>
 <!-- ===================== NAVBAR ===================== -->
-<header class="site-header">
-  <div class="nav-wrap">
-    <a href="index.html" class="logo" aria-label="Catalysta home">
-      <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo">
-    </a>
-    <nav class="main-nav">
-      <a href="index.html#home">Home</a>
-      <div class="nav-dropdown">
-        <a href="about.html" class="nav-dropdown-trigger active" aria-current="page">About us <span class="nav-caret" aria-hidden="true"></span></a>
-        <div class="nav-dropdown-menu">
-          <a href="about.html#our-company">Our Company</a>
-          <a href="about.html#our-team">Our Team</a>
-          <a href="about.html#our-approach">Our Approach</a>
-        </div>
-      </div>
-      <a href="services.html">Services</a>
-      <a href="blogs.html">Blogs</a>
-    </nav>
 
-    <!-- Primary contact action and mobile navigation toggle -->
-    <a href="contact.html" class="btn btn-pill btn-accent nav-cta">Get in touch</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
 
 <main>
   <!-- About page hero -->
@@ -60,13 +23,13 @@
       <div class="company-carousel" data-company-carousel role="region" aria-roledescription="carousel" aria-label="Catalysta office photos">
         <div class="company-carousel-viewport" tabindex="0" role="button" aria-label="Show next office photo">
           <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
-            <img src="../assets/Catalysta_Office.jpg" alt="Interior of the Catalysta office" draggable="false">
+            <img src="/assets/Catalysta_Office.jpg" alt="Interior of the Catalysta office" draggable="false">
           </figure>
           <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
-            <img src="../assets/Catalysta_Office(2).jpg" alt="Another view of the Catalysta office" draggable="false">
+            <img src="/assets/Catalysta_Office(2).jpg" alt="Another view of the Catalysta office" draggable="false">
           </figure>
           <figure class="company-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
-            <img src="../assets/Catalysta_Office(3).jpg" alt="A third view of the Catalysta office" draggable="false">
+            <img src="/assets/Catalysta_Office(3).jpg" alt="A third view of the Catalysta office" draggable="false">
           </figure>
         </div>
         <p class="company-photo-credit">Photo credit: <a href="https://www.instagram.com/edificepinas/" target="_blank" rel="noopener noreferrer">Edifice Pinas</a></p>
@@ -82,7 +45,7 @@
       <!-- Meaning behind the Catalysta name -->
       <section class="brand-etymology" aria-labelledby="brand-etymology-title">
         <div class="brand-etymology-logo">
-          <img src="../assets/logo.png" alt="Catalysta Consultancy logo">
+          <img src="/assets/logo.png" alt="Catalysta Consultancy logo">
         </div>
         <div class="brand-etymology-copy">
           <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Company</span></div>
@@ -93,15 +56,15 @@
       </section>
       <!-- Solo consultant model and offered services -->
       <section class="business-model" aria-labelledby="business-model-title">
-        <img class="business-model-image" src="../assets/hero_about(2).png" alt="A consultant working at a laptop with a cup of coffee">
+        <img class="business-model-image" src="/assets/hero_about(2).png" alt="A consultant working at a laptop with a cup of coffee">
         <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Company</span></div>
         <h3 class="heading-maroon" id="business-model-title">The Solo Consultant Model</h3>
         <p class="business-model-description">CATALYSTA is a consultancy firm that specializes in assisting SMEs, professionals, and various entities seeking guidance in conducting business effectively. We also support existing businesses facing operational challenges, offering solutions to formalize their operations and gain a competitive advantage.</p>
         <h4 class="business-model-services-title">Offered Services</h4>
         <ul class="business-model-services">
-          <li><a href="services.html#service-review"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><path d="M7 5.5H5.5v15h13v-15H17"/><path d="m8.5 14 2.2 2.2 4.8-4.8"/></svg></span><span class="service-label">Business Review</span></a></li>
-          <li><a href="services.html#service-proposal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M6 9v2.5h12V9M12 11.5V15"/></svg></span><span class="service-label">Business Proposal</span></a></li>
-          <li><a href="services.html#service-human-capital"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2c2.7 0 4.5 2 4.5 4.8"/></svg></span><span class="service-label">Managing Human Capital</span></a></li>
+          <li><a href="/services#service-review"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><path d="M7 5.5H5.5v15h13v-15H17"/><path d="m8.5 14 2.2 2.2 4.8-4.8"/></svg></span><span class="service-label">Business Review</span></a></li>
+          <li><a href="/services#service-proposal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M6 9v2.5h12V9M12 11.5V15"/></svg></span><span class="service-label">Business Proposal</span></a></li>
+          <li><a href="/services#service-human-capital"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2c2.7 0 4.5 2 4.5 4.8"/></svg></span><span class="service-label">Managing Human Capital</span></a></li>
         </ul>
       </section>
     </div>
@@ -211,7 +174,7 @@
 
       <section class="team-category" aria-labelledby="owner-title">
         <div class="owner-profile">
-          <img src="../assets/Pagkalinawan_Dina.png" alt="Portrait of Dina Pagkalinawan">
+          <img src="/assets/Pagkalinawan_Dina.png" alt="Portrait of Dina Pagkalinawan">
           <div class="owner-profile-copy">
             <h3 class="title" id="owner-title">Dina Pagkalinawan</h3>
             <p class="owner-profile-role">Owner &amp; Head of Catalysta</p>
@@ -225,45 +188,7 @@
 
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" id="contact">
-  <div class="section-inner footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo footer-logo" aria-label="Catalysta home">
-        <img src="../assets/logo.png" alt="Catalysta consultancy logo" class="brand-logo footer-brand-logo">
-      </a>
-      <p class="footer-contact"><i class='bx bxs-map' aria-hidden="true"></i><span>PSE Tower, 5th Avenue corner 28th Street, BGC 1634, Taguig, Metro Manila, Philippines</span></p>
-      <p class="footer-contact"><i class='bx bxs-envelope' aria-hidden="true"></i><a href="mailto:hello@catalysta.com">hello@catalysta.com</a></p>
-      <p class="footer-contact"><i class='bx bxs-phone' aria-hidden="true"></i><span>(+63) 995 069 6769</span></p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook' aria-hidden="true"></i></a>
-        <a href="#" aria-label="Instagram"><i class='bx bxl-instagram' aria-hidden="true"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-links">
-      <h4>Links</h4>
-      <a href="index.html#home">Home</a>
-      <a href="about.html">About us</a>
-      <a href="services.html">Services</a>
-      <a href="blogs.html">Blogs</a>
-    </div>
-
-    <div class="footer-form">
-      <h4>Contact us</h4>
-      <form id="contactForm" novalidate>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="3" required></textarea>
-        <button type="submit" class="btn btn-pill btn-accent">Send <span class="arrow">➤</span></button>
-        <p class="form-status" id="formStatus" role="status"></p>
-      </form>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Catalysta Consultancy</div>
-</footer>
-
-<script src="../JS/script.js"></script>
+<%- include('partials/footer') %>
+<script src="/JS/script.js" defer></script>
 </body>
 </html>

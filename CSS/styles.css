@@ -808,6 +808,7 @@ section{ position:relative; }
 .blog-list{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; margin:0 auto; }
 .story-card{ background:var(--maroon); color:var(--cream); box-shadow:0 20px 44px color-mix(in srgb, var(--maroon) 24%, transparent); }
 .story-card--with-image{ display:grid; grid-template-columns:1fr; }
+.blog-article[hidden]{ display:none; }
 .story-image{ height:180px; overflow:hidden; }
 .story-image img{ display:block; width:100%; height:100%; object-fit:cover; }
 .story-image--health img{ object-position:center 30%; }
